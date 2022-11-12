@@ -1,0 +1,103 @@
+:root {
+  font-family: "Clash Display", Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 100;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #ebebeb;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, p {
+  color: #484848;
+}
+
+h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+
+button {
+  border-radius: 100px;
+  border: 1px solid transparent;
+  font-family: "Clash Display";
+  font-weight: 600;
+  width: 100%;
+  padding: 0.3em 1.2em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  background-color: #D9D9D9;
+  color: #707070;
+}
+button:hover {
+  background-color: #484848;
+  color: #D9D9D9;
+}
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+.eixo {
+  transition: all 0.5s ease-in;
+}
+
+svg {
+  height: 400px;
+}
+
+svg:hover .eixo {
+  transform: translateY(20px);
+}
+
+
+.container {
+  background-color: #ffff;
+  width: 40vw;
+  padding-inline: 40px;
+  padding-block: 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(181.68deg, #FFFFFF 52.09%, #EFEFEF 98.7%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button {
+  align-items: flex-end;
+}
+
+label {
+  font-weight: 500;
+  color: #323232;
+  
+}
+
+input {
+  background-color: #fff;
+  border: 2px solid #323232;
+  border-radius: 100px;
+  height: 30px;
+  width: 100%;
+
+}
+
