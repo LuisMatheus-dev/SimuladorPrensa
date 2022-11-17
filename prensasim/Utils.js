@@ -1,14 +1,14 @@
 export class Utils {
-    static volume() {
+    static volume(raio, altura) {
         
     }
 
-    static area() {
+    static area(raio) {
 
     }
 
-    static converter() {
-
+    static converter(unidadeBase, unidadeAlvo) {
+        
     }
 
 }
