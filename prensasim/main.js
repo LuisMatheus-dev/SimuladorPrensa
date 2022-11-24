@@ -1,9 +1,11 @@
-import { Fluidos } from './model/Fluidos.js';
+import { Fluidos } from './models/Fluidos.js';
 
 
 const escolhaContainer = document.querySelector("#escolha"); 
 const btnBomba = document.querySelector(".btn-bomba");
 const btnPrensa = document.querySelector(".btn-prensa");
+const btnVoltarAoMenu = document.querySelector(".voltar");
+
 
 //Prensa
 const prensaControls = document.querySelector("#prensa-controls");
@@ -11,15 +13,12 @@ const prensaImage = document.querySelector(".prensa");
 const slideValue = document.querySelector("span");
 const inputSlider = document.querySelector("input");
 
-prensaControls.classList.add(" hidden");
-prensaImage.classList.add("hidden");
+function toggleItens(listOfObjects) {
+  [...listOfObjects].forEach(objectDOM => objectDOM.classList.toggle("hidden"));
+}
 
-btnPrensa.addEventListener("click", (e)=> {
-  
-  prensaControls.classList.toggle("hidden");
-  prensaImage.classList.toggle("hidden");
-
-})
+btnVoltarAoMenu.addEventListener("click", () => toggleItens([ prensaControls, prensaImage, escolhaContainer, btnVoltarAoMenu]))
+btnPrensa.addEventListener("click", () => toggleItens([ prensaControls, prensaImage, escolhaContainer, btnVoltarAoMenu ]));
 
 inputSlider.oninput = (() => {
   let value = inputSlider.value;

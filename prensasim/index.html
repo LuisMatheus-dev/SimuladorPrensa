@@ -12,6 +12,7 @@
 
 <body>
   <div id="app">
+    <button class="voltar hidden">Voltar ao Menu</button>
 
     <div class="container" id="escolha">
       <div class="header">
@@ -22,7 +23,7 @@
       <button class="btn-prensa">Simulação de Prensa</button>
     </div> 
 
-    <div class="container" id="prensa-controls">
+    <div class="container hidden" id="prensa-controls">
       <div class="header">
         <h1>prensasim</h1>
         <h3>Simulação de Baixa fidelidade para testes de carga sobre vigas</h3>
@@ -45,7 +46,7 @@
         <button>Calcular</button>
     </div>
 
-    <div class="prensa">
+    <div class="prensa hidden">
       <svg id="prensa" width="250" height="734" viewBox="0 0 250 734" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g class="eixo" filter="url(#filter0_i_103_91)">
           <rect x="152" y="21" width="20" height="259" fill="url(#paint0_linear_103_91)" />
@@ -600,7 +601,7 @@
 
 
   </div>
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 
 </html>

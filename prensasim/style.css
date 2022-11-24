@@ -179,10 +179,16 @@ svg:hover .eixo {
   transform: translateY(20px);
 }
 
+.voltar {
+  position: absolute;
+  top: 2vh;
+  text-align: left;
+}
+
 #escolha {
   position: absolute;
   top: 50%;
-  right: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
  
@@ -226,6 +232,11 @@ input {
   width: 100%;
 
 }
+
+.container ,.prensa {
+  top: 15vh;
+}
+
 
 
 .hidden {
