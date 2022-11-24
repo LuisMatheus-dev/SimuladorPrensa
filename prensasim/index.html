@@ -13,13 +13,22 @@
 <body>
   <div id="app">
 
-    <div class="container">
-      <div class="header-form">
+    <div class="container" id="escolha">
+      <div class="header">
+        <h1 class="title"><span class="subtitle">Simulação</span><br>MecFlu & Resmat</h1>
+        <h3>Escolha abaixo qual das ferramentas você deseja utilizar</h3>
+      </div>
+      <button class="btn-bomba">Simulação de Bomba</button>
+      <button class="btn-prensa">Simulação de Prensa</button>
+    </div> 
+
+    <div class="container" id="prensa-controls">
+      <div class="header">
         <h1>prensasim</h1>
         <h3>Simulação de Baixa fidelidade para testes de carga sobre vigas</h3>
       </div>
 
-      <label for="fname">Força a ser aplicada<label>
+      <label for="fname">Força a ser aplicada:<label>
         <div class="range">
           <div class="sliderValue">
             <span>100</span>
@@ -33,11 +42,7 @@
           </div>
         </div>
 
-          <button>Calcular</button>
-
-      
-     
-
+        <button>Calcular</button>
     </div>
 
     <div class="prensa">

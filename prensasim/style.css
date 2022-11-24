@@ -179,7 +179,21 @@ svg:hover .eixo {
   transform: translateY(20px);
 }
 
+#escolha {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+ 
+.title {
+  font-size: 1.5rem;
+}
 
+.subtitle {
+  font-weight: 400;
+}
+ 
 .container {
   position: absolute;
   left: 45vh;
@@ -213,3 +227,7 @@ input {
 
 }
 
+
+.hidden {
+  display: none;
+}
