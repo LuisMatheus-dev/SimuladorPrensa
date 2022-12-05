@@ -177,6 +177,10 @@ svg {
   height: 85vh;
 }
 
+.bomba {
+	max-width: 60vw;
+}
+
 svg:hover .eixo {
   transform: translateY(20px);
 }
