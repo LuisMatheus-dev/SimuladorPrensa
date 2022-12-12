@@ -4,38 +4,32 @@ export class Calculo {
 	temperatura = 25; 
 	massaEspecificaAgua = 997;
 	mi = 0.89*10^3;
-	gravidade = 9.81
+	gravidade = 9.81;
 	
 	constructor(
-		altura,
-		areaDoDiametroInternoDoTubo
-		comprimentoDoTubo,
-		perdaDeCargaAcessorios,
 		vazao,
-		velocidadeMedia,
-		rugosidadeRelativa,
-		fatorDeAtrito
-		reynolds
+		diametro,
+		segmentoA,
+		segmentoB,
+		segmentoC,
+		segmentoD
+
 	) {
-		this.altura = altura, 
-		this.areaDoDiametroInternoDoTubo = areaDoDiametroInternoDoTubo
-		this.comprimentoDoTubo = comprimentoDoTubo, 
-		this.perdaDeCargaAcessorios = perdaDeCargaAcessorios, 
-		this.vazao = vazao,
-		this.velocidadeMedia = velocidadeMedia, 
-		this.rugosidadeRelativa = rugosidadeRelativa, 
-		this.fatorDeAtrito = fatorDeAtrito
-		this.reynolds = reynolds;
+		this._vazao = vazao
+		this._diametro = diametro
+		this._segmentoA = segmentoA
+		this._segmentoB = segmentoB
+		this._segmentoC = segmentoC
+		this._segmentoD = segmentoD 
 	}
 
-	get altura() { return this.altura }
-	get areaDoDiametroInternoDoTubo() { return this.areaDoDiametroInternoDoTubo }
-	get comprimentoDoTubo() { return this.comprimentoDoTubo }
-	get perdaDeCargaAcessorios() { return this.perdaDeCargaAcessorios }
-	get vazao() { return this.vaza }
-	get velocidadeMedia() { return this.velocidadeMedia }
-	get rugosidadeRelativa() { return this.rugosidadeRelativa }
-	get fatorDeAtrito() { return this.fatorDeAtrito }
-	get reynolds() { return this.reynolds }
+	get vazao() { return this._vazao }
+	get diametro() { return this._diametro }
+	get segmentoA() { return this._segmentoA }
+	get segmentoB() { return this._segmentoB }
+	get segmentoC() { return this._segmentoC }
+	get segmentoD() { return this._segmentoD }
+	
+
 }
 

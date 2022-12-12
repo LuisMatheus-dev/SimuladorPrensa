@@ -1,4 +1,7 @@
-import { Fluidos } from './models/Fluidos.js';
+import { BombaController } from './controller/BombaController.js';
+import { CalculoService } from './model/service/CalculoService.js';
+import { BombaView } from './view/BombaView.js';
+
 
 
 const escolhaContainer = document.querySelector("#escolha");
@@ -12,27 +15,20 @@ const inputSegmentoA = document.querySelector(".segmento-a");
 const inputSegmentoB = document.querySelector(".segmento-b");
 const inputSegmentoC = document.querySelector(".segmento-c");
 
-//Valores Bomba
-
-const diametroTubo = inputDiametro.value;
-const valorSegA = inputSegmentoA.value;
-const valorSegB = inputSegmentoB.value;
-const valorSegC = inputSegmentoC.value;
-
-
 
 //Prensa
-const prensaControls = document.querySelector("#prensa-controls");
-const prensaImage = document.querySelector(".prensa");
-const slideValue = document.querySelector("span");
-const inputSlider = document.querySelector("input");
+//const prensaControls = document.querySelector("#prensa-controls");
+//const prensaImage = document.querySelector(".prensa");
+
+const slideValue = document.querySelector(".sliderValue");
+const inputSlider = document.querySelector("#vazao");
 
 function toggleItens(listOfObjects) {
 	[...listOfObjects].forEach(objectDOM => objectDOM.classList.toggle("hidden"));
 }
 
-btnVoltarAoMenu.addEventListener("click", () => toggleItens([prensaControls, prensaImage, escolhaContainer, btnVoltarAoMenu]))
-btnPrensa.addEventListener("click", () => toggleItens([prensaControls, prensaImage, escolhaContainer, btnVoltarAoMenu]));
+//btnVoltarAoMenu.addEventListener("click", () => toggleItens([prensaControls, prensaImage, escolhaContainer, btnVoltarAoMenu]))
+//btnPrensa.addEventListener("click", () => toggleItens([prensaControls, prensaImage, escolhaContainer, btnVoltarAoMenu]));
 
 inputSlider.oninput = (() => {
 	let value = inputSlider.value;
@@ -44,10 +40,11 @@ inputSlider.onblur = (() => {
 	slideValue.classList.remove("show");
 });
 
+const controller = new BombaController(new CalculoService(), new BombaView() );
+
 
 //-----------------------------------------------
-const RUGOSIDADE = 0.0015;
-const TEMPAGUA = 25.00;
+
 
 
 
