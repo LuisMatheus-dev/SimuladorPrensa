@@ -211,10 +211,14 @@ svg:hover .eixo {
  
 .container {
   position: absolute;
-  left: 45vh;
+  left: 60vh;
   background-color: var(--white);
+<<<<<<< HEAD
   width: 40vw;
   min-width: 400px;
+=======
+  width: 50vw;
+>>>>>>> ddbfaf1e08b1c4ec17d0a6bc7d1367a4f3d95bb7
   padding-inline: 40px;
   padding-block: 20px;
   border-radius: 30px;
@@ -284,6 +288,7 @@ input {
 
 #diametro {
 	padding: 0;
+  padding-left: 1vh;
 }
 
 
