@@ -26,42 +26,9 @@ body {
   border-radius: 10px;
   padding: 0 65px 0 45px;
   box-shadow: 2px 4px 8px rgba(0,0,0,0.1);
-}
-.sliderValue{
   position: relative;
+}
 
-}
-.sliderValue span{
-  position: absolute;
-  height: 45px;
-  width: 45px;
-  transform: translateX(-70%) scale(0);
-  font-weight: 500;
-  top: -40px;
-  line-height: 55px;
-  z-index: 2;
-  color: var(--white);
-  transform-origin: bottom;
-  transition: transform 0.3s ease-in-out;
-}
-.sliderValue span.show{
-  transform: translateX(-70%) scale(1);
-}
-.sliderValue span:after{
-  position: absolute;
-  content: '';
-  height: 100%;
-  width: 100%;
-  background: var(--gray-400);
-  border: 3px solid var(--white);
-  z-index: -1;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  border-bottom-left-radius: 50%;
-  box-shadow: 0px 0px 8px rgba(0,0,0,0.1);
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-}
 .field{
   display: flex;
   align-items: center;
@@ -81,6 +48,11 @@ body {
 .field .value.right{
   right: -43px;
 }
+
+.range {
+	margin-top: 40px;
+}
+
 .range input{
   -webkit-appearance: none;
   width: 80%;
@@ -90,12 +62,37 @@ body {
   outline: none;
   border: none;
   z-index: 2222;
+  position: relative;
+  
+
 }
+
+
+.sliderValue{
+  position: absolute;
+  color: var(--gray-100);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-weight: 600;
+  top: -25px;
+  right: 43%;
+  padding: 2px 30px;
+  background-color: var(--gray-400);
+ border-radius: 50px;
+
+
+}
+
+
 .range input::-webkit-slider-thumb{
   -webkit-appearance: none;
   width: 12px;
   height: 12px;
-  background: red;
+  background: var(--gray-400);
   border-radius: 50%;
   background-color: var(--white);
   cursor: pointer;
@@ -213,12 +210,8 @@ svg:hover .eixo {
   position: absolute;
   left: 60vh;
   background-color: var(--white);
-<<<<<<< HEAD
   width: 40vw;
   min-width: 400px;
-=======
-  width: 50vw;
->>>>>>> ddbfaf1e08b1c4ec17d0a6bc7d1367a4f3d95bb7
   padding-inline: 40px;
   padding-block: 20px;
   border-radius: 30px;
@@ -245,8 +238,11 @@ input {
   height: 30px;
   width: 100%;
   color: var(--gray-400);	
+  font-family: "Clash Display", sans-serif;
+  font-weight: 600;
  
 }
+
 
 .input-group {
 	margin-top: 40px;
@@ -321,6 +317,9 @@ label {
 
 }
 
+#diametro-container {
+	margin-block: 20px;
+}
 
 @media (max-width: 900px) {
 
@@ -329,6 +328,5 @@ label {
 		right: 0;
 		top: 88vh;
 		margin: 10vw;
-		
 	}
 }

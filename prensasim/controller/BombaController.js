@@ -8,17 +8,21 @@ export class BombaController {
 	}
 
 	calcular = variaveis => {
-		
-		const [
-			vazao,
-			diametro,
-			segmentoA,
-			segmentoB,
-			segmentoC,
-			segmentoD
-		] = variaveis;  
 
-		this.model.add(	vazao, diametro, segmentoA, segmentoB, segmentoC, segmentoD );		
+		this.model.add(...variaveis);
+		this.model.haaland()
+		// const [
+		// 	vazao,
+		// 	diametro,
+		// 	segmentoA,
+		// 	segmentoB,
+		// 	segmentoC,
+		// 	segmentoD
+		// ] = variaveis;  
+
+		// this.model.add(	vazao, diametro, segmentoA, segmentoB, segmentoC, segmentoD );		
+
+		
 	}
 
     

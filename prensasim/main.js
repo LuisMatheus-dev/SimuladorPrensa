@@ -20,8 +20,11 @@ const inputSegmentoC = document.querySelector(".segmento-c");
 //const prensaControls = document.querySelector("#prensa-controls");
 //const prensaImage = document.querySelector(".prensa");
 
-const slideValue = document.querySelector(".sliderValue");
-const inputSlider = document.querySelector("#vazao");
+const slideValueVazao = document.querySelector("#sliderVazao");
+const inputSliderVazao = document.querySelector("#vazao");
+
+const slideValueDiametro = document.querySelector("#sliderDiametro");
+const inputSliderDiametro = document.querySelector("#diametro");
 
 function toggleItens(listOfObjects) {
 	[...listOfObjects].forEach(objectDOM => objectDOM.classList.toggle("hidden"));
@@ -30,14 +33,14 @@ function toggleItens(listOfObjects) {
 //btnVoltarAoMenu.addEventListener("click", () => toggleItens([prensaControls, prensaImage, escolhaContainer, btnVoltarAoMenu]))
 //btnPrensa.addEventListener("click", () => toggleItens([prensaControls, prensaImage, escolhaContainer, btnVoltarAoMenu]));
 
-inputSlider.oninput = (() => {
-	let value = inputSlider.value;
-	slideValue.textContent = value;
-	slideValue.style.left = (value / 2) + "%";
-	slideValue.classList.add("show");
+inputSliderVazao.oninput = (() => {
+	let value = inputSliderVazao.value;
+	slideValueVazao.textContent = value + "m³/s";
 });
-inputSlider.onblur = (() => {
-	slideValue.classList.remove("show");
+
+inputSliderDiametro.oninput = (() => {
+	let value = inputSliderDiametro.value;
+	slideValueDiametro.textContent = value + "mm";
 });
 
 const controller = new BombaController(new CalculoService(), new BombaView() );
